@@ -561,7 +561,7 @@ cdef class Generator:
             raise TypeError('Unsupported dtype %r for integers' % _dtype)
 
 
-        if size is None and dtype in (bool, int, np.compat.long):
+        if size is None and dtype in (bool, int):
             if np.array(ret).shape == ():
                 return dtype(ret)
         return ret
@@ -585,7 +585,7 @@ cdef class Generator:
         Examples
         --------
         >>> np.random.default_rng().bytes(10)
-        b'\xfeC\x9b\x86\x17\xf2\xa1\xafcp' # random
+        b'\\xfeC\\x9b\\x86\\x17\\xf2\\xa1\\xafcp' # random
 
         """
         cdef Py_ssize_t n_uint32 = ((length - 1) // 4 + 1)

@@ -763,7 +763,7 @@ cdef class RandomState:
         else:
             raise TypeError('Unsupported dtype %r for randint' % _dtype)
 
-        if size is None and dtype in (bool, int, np.compat.long):
+        if size is None and dtype in (bool, int):
             if np.array(ret).shape == ():
                 return dtype(ret)
         return ret
@@ -795,7 +795,7 @@ cdef class RandomState:
         Examples
         --------
         >>> np.random.bytes(10)
-        ' eh\\x85\\x022SZ\\xbf\\xa4' #random
+        b' eh\\x85\\x022SZ\\xbf\\xa4' #random
         """
         cdef Py_ssize_t n_uint32 = ((length - 1) // 4 + 1)
         # Interpret the uint32s as little-endian to convert them to bytes
