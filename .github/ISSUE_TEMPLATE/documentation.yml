@@ -19,4 +19,3 @@ body:
       Make sure to check https://github.com/numpy/numpy-tutorials and see if this issue might be more appropriate there.
   validations:
     required: false
-

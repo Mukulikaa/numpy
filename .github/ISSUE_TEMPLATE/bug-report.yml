@@ -1,6 +1,5 @@
 name: Bug report
-description: |
-  Report a bug. For security vulnerabilities see Report a security vulnerability in the templates.
+description: Report a bug. For security vulnerabilities see Report a security vulnerability in the templates.
 title: "BUG:"
 labels: [00 - Bug]
 
@@ -39,4 +38,3 @@ body:
     description: Output from 'import sys, numpy; print(numpy.__version__, sys.version)'
   validations:
     required: true
-
